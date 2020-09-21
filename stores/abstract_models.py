@@ -32,8 +32,8 @@ class StoreAddress(AbstractAddress):
 
 
 class StoreGroup(models.Model):
-    name = models.CharField(_('Name'), max_length=100, unique=True)
-    slug = models.SlugField(_('Slug'), max_length=100, unique=True)
+    name = models.CharField('Name', max_length=100, unique=True)
+    slug = models.SlugField('Slug', max_length=100, unique=True)
 
     class Meta:
         abstract = True
@@ -49,8 +49,8 @@ class StoreGroup(models.Model):
 
 
 class Store(models.Model):
-    name = models.CharField(_('Name'), max_length=100)
-    slug = models.SlugField(_('Slug'), max_length=100, null=True)
+    name = models.CharField('Name', max_length=100)
+    slug = models.SlugField('Slug', max_length=100, null=True)
 
     # Contact details
     manager_name = models.CharField(
@@ -64,14 +64,14 @@ class Store(models.Model):
         unique=True,
         null=True,
         blank=True,
-        help_text=_("A reference number that uniquely identifies this store"))
+        help_text="A reference number that uniquely identifies this store")
 
     image = models.ImageField(
-        _("Image"),
+        "Image",
         upload_to="uploads/store-images",
         blank=True, null=True)
     description = models.CharField(
-        _("Description"),
+        "Description",
         max_length=2000,
         blank=True, null=True)
     location = PointField(

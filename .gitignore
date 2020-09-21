@@ -15,5 +15,6 @@ cover/
 docs/_build/
 sandbox/public/media/uploads
 sandbox/public/media/cache
+virtualenv
 
 settings_local.py
