@@ -13,8 +13,7 @@ class StoreAddressForm(forms.ModelForm):
 
     class Meta:
         model = get_model('stores', 'StoreAddress')
-        fields = [
-            'line1', 'line2', 'line3', 'line4', 'state', 'postcode', 'country']
+        fields = ['line1', 'state', 'postcode', 'country']
 
 
 class StoreForm(forms.ModelForm):
