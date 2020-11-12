@@ -112,7 +112,6 @@ class StoreUpdateView(StoreEditMixin, UpdateWithInlinesView):
     template_name = "stores/dashboard/store_update.html"
     form_class = StoreForm
     success_url = reverse_lazy('stores-dashboard:store-list')
-    inlines = [StoreAddressInline]
 
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
