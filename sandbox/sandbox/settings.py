@@ -116,6 +116,9 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'stores',
     'stores.dashboard',
+
+    'modeltranslation',
+
 ] + oscar.INSTALLED_APPS
 
 
@@ -197,6 +200,11 @@ LOGGING = {
         },
     }
 }
+gettext = lambda s: s
+LANGUAGES = (
+    ('en', gettext('English')),
+    ('el', gettext('Greek')),
+)
 
 # This is set here to make spatialite work with Mac OS X it should
 # not impact other linux-based systems. It has been tested on Ubuntu
